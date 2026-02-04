@@ -4,7 +4,7 @@ pipeline{
         stage(code){
             steps{
                 git url: "https://github.com/tnadaf-ops/two-tier-flask-app.git", branch: "master"
-                echo "code clone successfully"
+                echo "code cloned successfully"
             }
         }
         stage(build){
@@ -35,7 +35,7 @@ pipeline{
         stage(deploy){
             steps{
                 sh "docker compose up -d --build flask-app"
-                echo "deploy successfully"
+                echo "code deploy successfully"
             }
         }
     }
