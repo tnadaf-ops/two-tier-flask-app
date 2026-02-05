@@ -1,4 +1,4 @@
-pipeline{
+-pipeline{
     agent {label "dev"};
     stages{
         stage(code){
@@ -36,6 +36,16 @@ pipeline{
             steps{
                 sh "docker compose up -d --build flask-app"
                 echo "code deploy successfully"
+            }
+        }
+    }
+    post{
+        success{
+            script{
+                emailext from: "nadaftousief@gmail.com,
+                subject: "Jenkins Build",
+                body: "Good news: Jenkins build successfully",
+                to: "nadaftousief@gmail.com"    
             }
         }
     }
