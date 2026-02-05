@@ -42,10 +42,10 @@
     post{
         success{
             script{
-                emailext from: "nadaftousief@gmail.com",
-                subject: "Jenkins Build",
-                body: "Good news: Jenkins build successfully",
-                to: "nadaftousief@gmail.com"    
+                emailext from: 'nadaftousief@gmail.com',
+                subject: 'Jenkins Build',
+                body: 'Good news: Jenkins build successfully',
+                to: 'nadaftousief@gmail.com' 
             }
         }
     }
