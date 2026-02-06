@@ -39,13 +39,13 @@
             }
         }
     }
-    post{
-        success{
+post{
+    success{
             script{
-                emailtext from: 'nadaftousief@gmail.com',
-                subject: 'Jenkins Build',
-                body: 'Good news: Jenkins build successfully',
-                to: 'nadaftousief@gmail.com' 
+                emailext from: 'nadaftousief@gmail.com',
+                to: 'nadaftousief@gmail.com',
+                body: 'Build success for Demo CICD App',
+                subject: 'Build success for Demo CICD App'
             }
         }
     }
