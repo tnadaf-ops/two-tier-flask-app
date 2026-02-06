@@ -42,7 +42,7 @@
     post{
         success{
             script{
-                emailext from: 'nadaftousief@gmail.com',
+                emailtext from: 'nadaftousief@gmail.com',
                 subject: 'Jenkins Build',
                 body: 'Good news: Jenkins build successfully',
                 to: 'nadaftousief@gmail.com' 
